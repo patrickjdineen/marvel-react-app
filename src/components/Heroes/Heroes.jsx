@@ -3,6 +3,7 @@ import {serverCalls} from '../../api'
 import {Button,Card,} from 'react-bootstrap';
 import {useGetData} from '../../CustomHooks';
 import {useHistory} from 'react-router-dom';
+import avengers from '../../assets/images/avengers.jpg'
 
 
 export const Heroes = () => {
@@ -31,7 +32,8 @@ export const Heroes = () => {
             <Button variant="secondary" onClick = { () => routeChange("",'create')}>Add a new Hero</Button>
             {heroData.map( (item) =>(
                 <div key="item.id">
-                    <Card>
+                    <Card style={{width: '20rem'}}>
+                    <Card.Img variant="top" src={avengers} />
                         <Card.Body>
                             <Card.Title>
                                 {item.hero_name}
