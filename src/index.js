@@ -12,13 +12,13 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Nav} from 'react-bootstrap';
 import marvel from '../src/assets/images/marvel.png';
+import { FirebaseAppProvider, AuthCheck } from 'reactfire';
 import {firebaseConfig} from './firebaseConfig';
-import {FireBaseAppProvider, Authcheck} from 'reactfire';
 import 'firebase/auth';
 
 ReactDOM.render(
   <React.StrictMode>
-    <FireBaseAppProvider firebaseConfig={firebaseConfig}>
+    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
     <Router>
     
     <Navbar bg="dark" variant="dark">
@@ -62,7 +62,7 @@ ReactDOM.render(
       </Switch>
     
     </Router>
-    </FireBaseAppProvider>
+    </FirebaseAppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
