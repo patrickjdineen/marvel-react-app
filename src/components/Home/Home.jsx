@@ -9,6 +9,6 @@ export const Home = () =>{
             <h1>THE HEROES OF MARVEL</h1>
             <h4>ALL IN YOUR OWN API</h4>
         </div>
-    </header>
+        </header>
     )
 }

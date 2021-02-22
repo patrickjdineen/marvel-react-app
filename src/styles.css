@@ -1,3 +1,8 @@
+@font-face {
+    font-family:"avengerFont";
+    src: url(../src/assets/avengero-font/AvengeroRegular-zvgl.ttf);
+}
+
 /** Header Image Syling */
 .hero-image{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/src/assets/images/mcu.jpg);
@@ -23,11 +28,19 @@
 
 .navbar a, .navbar li{
     color:white;
+
     text-decoration: none;
-    display:inline;
+
     padding: .5vh .5vw;
+    font-family: avengerFont;
 }
 
-.home-button{
-    max-height:4vh;
+.page-title{
+    margin-top:2vh;
+    font-family:avengerFont;
+}
+
+.login-image{
+    max-height:50vh;
+    height:50vh;
 }

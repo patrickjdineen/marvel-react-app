@@ -2,7 +2,9 @@ import React from 'react';
 import firebase from 'firebase/app';
 import { useAuth, AuthCheck } from 'reactfire';
 import 'firebase/auth';
-import { Jumbotron, Button, Container } from 'react-bootstrap';
+import { Jumbotron, Button, Container, Row, Col } from 'react-bootstrap';
+import hulk from '../../assets/images/hulk.png'
+import ironman from '../../assets/images/ironman.jpg'
 
 export const Login = () => {
     const auth = useAuth();
@@ -17,16 +19,29 @@ export const Login = () => {
 
     return (
         <Container>
-            <Jumbotron>
-                <h1>Login/Logout Here</h1>
-                <AuthCheck fallback={
-                    <Button onClick={sign_in}>
-                        Sign In
-                    </Button>
+            <AuthCheck fallback={
+                <Row>
+                    <Col>
+                        <h1 className="page-title">Sign In Here</h1>
+                        <Button variant="secondary" onClick={sign_in}>
+                            Sign In
+                        </Button>
+                    </Col>
+                    <Col>
+                        <img className="login-image" src={ironman} alt="ironman"/>
+                    </Col>
+                </Row>
                 }>
-                    <Button onClick={sign_out}>Sign Out</Button>
-                </AuthCheck>
-            </Jumbotron>
+                <Row>
+                    <Col>
+                        <h1 className="page-title">Log Out Here</h1>
+                        <Button variant="danger" onClick={sign_out}>Sign Out</Button>
+                    </Col>
+                    <Col>
+                        <img className="login-image" src={hulk} alt="hulk"/>
+                    </Col>
+                </Row>
+            </AuthCheck>
         </Container>
     )
 }

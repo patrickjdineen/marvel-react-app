@@ -21,7 +21,7 @@ export const UpdateHero = () =>{
     
     return(
         <Container>
-        <h1>Update Your Drone</h1>
+        <h1 className="page-title">Update Your Heroes Attributes</h1>
         <form onSubmit = {handleSubmit(onSubmit)}>
         <label htmlFor="hero_name">Hero's Name</label>
             <input type="text" name="hero_name" id="hero_name" placeholder="What is your Hero's name?" ref={ register }/>

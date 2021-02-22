@@ -1,6 +1,6 @@
 import react, {useState, useEffect } from 'react';
 import {serverCalls} from '../../api'
-import {Button,Card,} from 'react-bootstrap';
+import {Button,Card, Container, CardGroup} from 'react-bootstrap';
 import {useGetData} from '../../CustomHooks';
 import {useHistory} from 'react-router-dom';
 import avengers from '../../assets/images/avengers.jpg'
@@ -26,16 +26,17 @@ export const Heroes = () => {
     }
 
     return(
-        <div>
-            <h1>AVENGERS ASSEMBLE!!! </h1>
+        <Container>
+            <h1 className="page-title">AVENGERS ASSEMBLE </h1>
             <h4>If you have another hero to add to your team, use the button below to add them!</h4>
             <Button variant="secondary" onClick = { () => routeChange("",'create')}>Add a new Hero</Button>
             {heroData.map( (item) =>(
                 <div key="item.id">
+                    <CardGroup>
                     <Card style={{width: '20rem'}}>
                     <Card.Img variant="top" src={avengers} />
                         <Card.Body>
-                            <Card.Title>
+                            <Card.Title className="page-title">
                                 {item.hero_name}
                             </Card.Title>
                             <Card.Text>
@@ -51,8 +52,9 @@ export const Heroes = () => {
                             <Button variant="danger" onClick = {()=> deleteHero(item.id)}>Delete Hero</Button>
                         </Card.Body>
                     </Card>
+                    </CardGroup>
                 </div>
             ))}
-        </div>
+        </Container>
     )
 }

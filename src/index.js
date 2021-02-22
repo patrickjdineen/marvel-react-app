@@ -22,24 +22,32 @@ ReactDOM.render(
     <Router>
     
     <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="#home">
-      <img
-        src={marvel}
-        width="75"
-        height="30"
-        className="d-inline-block align-top"
-        alt="React Bootstrap logo"
-      />
-      
-    </Navbar.Brand>
+      <Navbar.Brand href="/">
+        <img
+          src={marvel}
+          href="/"
+          width="75"
+          height="30"
+          className="d-inline-block align-top"
+          alt="Marvel Logo"
+        />
+      </Navbar.Brand>
+
       <Nav className="justify-content-end">
+      <AuthCheck fallback={
+        <Nav.Link>
+        <Link to="/login">Login</Link>
+      </Nav.Link>
+      }>
       <Nav.Link>
         <Link to="/heroes">Heroes</Link>
       </Nav.Link>
       <Nav.Link>
-        <Link to="/login">Login</Link>
+        <Link to="/login">Logout</Link>
       </Nav.Link>
+      </AuthCheck>
       </Nav>
+
     </Navbar>
 
       <Switch>
