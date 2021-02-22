@@ -18,8 +18,9 @@ import 'firebase/auth';
 
 ReactDOM.render(
   <React.StrictMode>
+    <FireBaseAppProvider firebaseConfig={firebaseConfig}>
     <Router>
-  
+    
     <Navbar bg="dark" variant="dark">
     <Navbar.Brand href="#home">
       <img
@@ -61,6 +62,7 @@ ReactDOM.render(
       </Switch>
     
     </Router>
+    </FireBaseAppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
