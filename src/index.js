@@ -14,6 +14,7 @@ import {Navbar, Nav} from 'react-bootstrap';
 import marvel from '../src/assets/images/marvel.png';
 import {firebaseConfig} from './firebaseConfig';
 import {FireBaseAppProvider, Authcheck} from 'reactfire';
+import 'firebase/auth';
 
 ReactDOM.render(
   <React.StrictMode>
