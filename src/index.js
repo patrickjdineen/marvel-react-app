@@ -28,11 +28,9 @@ ReactDOM.render(
         className="d-inline-block align-top"
         alt="React Bootstrap logo"
       />
+      
     </Navbar.Brand>
       <Nav className="justify-content-end">
-      <Nav.Link>
-        <Link to="/">Home</Link>
-      </Nav.Link>
       <Nav.Link>
         <Link to="/heroes">Heroes</Link>
       </Nav.Link>
